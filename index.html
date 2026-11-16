@@ -146,7 +146,7 @@
           var v = el("video", "demo" + (p.video.portrait ? " portrait" : ""));
           v.src = vid;
           if (safeUrl(p.video.poster)) v.poster = p.video.poster;
-          v.controls = true; v.muted = true; v.playsInline = true; v.preload = "none";
+          v.controls = true; v.playsInline = true; v.preload = "none";
           v.setAttribute("aria-label", p.name + " demo video");
           card.appendChild(v);
         }
