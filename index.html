@@ -141,6 +141,15 @@
         head.appendChild(icon);
         head.appendChild(title);
         card.appendChild(head);
+        var vid = p.video && safeUrl(p.video.src);
+        if (vid) {
+          var v = el("video", "demo" + (p.video.portrait ? " portrait" : ""));
+          v.src = vid;
+          if (safeUrl(p.video.poster)) v.poster = p.video.poster;
+          v.controls = true; v.muted = true; v.playsInline = true; v.preload = "none";
+          v.setAttribute("aria-label", p.name + " demo video");
+          card.appendChild(v);
+        }
         card.appendChild(el("p", null, p.description));
         var tags = el("div", "tags");
         var live = p.status === "live";
@@ -153,6 +162,8 @@
         var learn = safeUrl(p.links && p.links.learnMore);
         if (open) { var a = el("a", "more", (p.kind === "web" ? "Open " : "Get ") + p.name + " →"); a.href = open; a.rel = "noopener"; links.appendChild(a); }
         if (learn) { var b = el("a", "more sub", "Free guide →"); b.href = learn; b.rel = "noopener"; links.appendChild(b); }
+        var demo = safeUrl(p.links && p.links.demo);
+        if (demo && !vid) { var c = el("a", "more sub", "Watch the demo →"); c.href = demo; c.rel = "noopener"; links.appendChild(c); }
         card.appendChild(links);
         grid.appendChild(card);
       });

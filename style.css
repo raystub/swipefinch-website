@@ -53,6 +53,8 @@ h2 { font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.02em; line-height: 1.
 .links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .links .more { margin-top: 0; }
 .more.sub { color: var(--sub); }
+.app video.demo { width: 100%; aspect-ratio: 16/9; border-radius: 14px; background: var(--ink); object-fit: cover; }
+.app video.demo.portrait { aspect-ratio: 9/16; max-height: 420px; object-fit: contain; }
 .more-title { font-size: clamp(22px, 3vw, 28px); letter-spacing: -0.01em; margin: 64px 0 8px; }
 .tag { align-self: flex-start; display: inline-block; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: #FEF3C7; color: #92400E; }
 
