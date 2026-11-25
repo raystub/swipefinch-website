@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SwipeFinch · Apps made for everyone</title>
-  <meta name="description" content="SwipeFinch LLC is an independent app studio in Clearwater, Florida. We make simple, private, fairly priced apps and web apps for everyone, including Dimefinch, Fundfinch and Portfolio Prism.">
+  <meta name="description" content="SwipeFinch LLC is an independent app studio in Clearwater, Florida. We make simple, private, fairly priced apps and web apps for everyone, including Dimefinch, Fundfinch and Tide Tossers.">
   <meta property="og:title" content="SwipeFinch · Apps made for everyone">
   <meta property="og:description" content="An independent app studio in Clearwater, Florida. Simple, private, fairly priced apps for everyone.">
   <meta property="og:image" content="https://swipefinch.com/icon.png">
@@ -37,9 +37,10 @@
 
 <section id="apps">
   <div class="wrap">
+    <p class="kicker">Our big three</p>
     <h2>Our apps</h2>
     <p class="section-lead">Every app here is made by SwipeFinch.</p>
-    <div class="apps">
+    <div class="apps featured">
       <article class="app">
         <div class="app-head">
           <img src="app-dimefinch.png" alt="Dimefinch app icon">
@@ -60,6 +61,20 @@
       </article>
       <article class="app">
         <div class="app-head">
+          <img src="app-tidetossers.png" alt="Tide Tossers game icon">
+          <div><h3>Tide Tossers</h3><div class="ages">Ocean rescue game for everyone</div></div>
+        </div>
+        <p>Swim real sea creatures through five ocean worlds, break ghost nets, traps and trash, and lead the wildlife you free to open water before the tide goes out. Plus boss fights, Puzzle and Arcade modes.</p>
+        <div class="tags"><span class="tag">Coming soon to iPhone, iPad &amp; Android</span><span class="made">Made by SwipeFinch</span></div>
+        <a class="more" href="https://tidetossers.swipefinch.com">Visit the Tide Tossers site →</a>
+      </article>
+    </div>
+
+    <h3 class="more-title">More from SwipeFinch</h3>
+    <p class="section-lead">New apps and web apps from our studio. Each one is free to start.</p>
+    <div class="apps" id="catalog">
+      <article class="app">
+        <div class="app-head">
           <img src="app-portfolio-prism.png" alt="Portfolio Prism app icon">
           <div><h3>Portfolio Prism</h3><div class="ages">Investors, 18+</div></div>
         </div>
@@ -67,12 +82,6 @@
         <div class="tags"><span class="tag live">Now on the web</span><span class="made">Made by SwipeFinch</span></div>
         <a class="more" href="https://prism.swipefinch.com">Visit prism.swipefinch.com →</a>
       </article>
-    </div>
-
-    <div id="more" hidden>
-      <h3 class="more-title">More from SwipeFinch</h3>
-      <p class="section-lead">New apps and web apps from our studio. Each one is free to start.</p>
-      <div class="apps" id="catalog"></div>
     </div>
   </div>
 </section>
@@ -167,8 +176,7 @@
         card.appendChild(links);
         grid.appendChild(card);
       });
-      document.getElementById("more").hidden = false;
-    })
+          })
     .catch(function () { /* the curated apps above still show */ });
 })();
 </script>
